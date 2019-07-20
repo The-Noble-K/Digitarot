@@ -1,0 +1,26 @@
+{
+  "name": "digitarot",
+  "version": "1.0.0",
+  "description": "Tarot for the digital age.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Noble-K/Digitarot.git"
+  },
+  "keywords": [
+    "Tarot"
+  ],
+  "author": "Jarod Sneed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/The-Noble-K/Digitarot/issues"
+  },
+  "homepage": "https://github.com/The-Noble-K/Digitarot#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "reactstrap": "^8.0.1"
+  }
+}
