@@ -18,7 +18,7 @@ class App extends Component {
 
     render() {
         return(
-            <div class="card-group">
+            <div class="card-deck">
                 {this.state.cards.map(card => (
                     <div class="card" key={card.id} >
                         <img class="card-img-top" src={card.image} alt={card.name}/>
@@ -26,6 +26,9 @@ class App extends Component {
                             <h5 class="card-title">{card.name}</h5>
                             <p class="card-text">Themes: {card.meaning}</p>
                             <p class="card-text"><small class="text-muted">Reversed Themes: {card.reversal}</small></p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Sharman-Caselli Tarot Deck</small>
                         </div>
                     </div>
                 ))}
