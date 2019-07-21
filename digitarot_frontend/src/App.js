@@ -18,28 +18,14 @@ class App extends Component {
 
     render() {
         return(
-            <div>
+            <div class="card-group">
                 {this.state.cards.map(card => (
-                    <div class='ui centered cards' idName='cardGroup'>
-                        <div class="ui card">
-                            <div class="image">
-                                <img src={card.image} alt={card.name} />
-                            </div>
-                            <div class="content">
-                                <div class="header">
-                                    <h1>{card.name}</h1>
-                                </div>
-                            <div class="description">
-                                <p>{card.meaning}</p>
-                                <p>{card.reversal}</p>
-                            </div>
-                            </div>
-                            <div class="extra content">
-                                <a>
-                                <i aria-hidden="true" class="link icon"></i>
-                                    Read More
-                                </a>
-                            </div>
+                    <div class="card" key={card.id} >
+                        <img class="card-img-top" src={card.image} alt={card.name}/>
+                        <div class="card-body">
+                            <h5 class="card-title">{card.name}</h5>
+                            <p class="card-text">Themes: {card.meaning}</p>
+                            <p class="card-text"><small class="text-muted">Reversed Themes: {card.reversal}</small></p>
                         </div>
                     </div>
                 ))}
