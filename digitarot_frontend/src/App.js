@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Card, CardDeck } from 'react-bootstrap';
+import { Card, CardGroup, } from 'react-bootstrap';
 
 class App extends Component {
     state = {
@@ -19,15 +19,14 @@ class App extends Component {
 
     render() {
         return(
-            <CardDeck>
+            <CardGroup>
                 {this.state.cards.map(card => (
-                    <Card>
+                    <Card style={{ width: "450px"}}>
                         <Card.Img variant="top" src={card.image} alt={card.name} />
                         <Card.Body>
                             <Card.Title>{card.name}</Card.Title>
                             <Card.Text>
                                 Themes: {card.meaning}
-                                Reverse Themes: {card.reversal}
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer>
@@ -35,7 +34,7 @@ class App extends Component {
                         </Card.Footer>
                     </Card>
                 ))}
-            </CardDeck>
+            </CardGroup>
         );
     }
 }
