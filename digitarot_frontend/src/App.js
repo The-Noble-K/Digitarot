@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Card, CardGroup, } from 'react-bootstrap';
+import { Card, Container, CardDeck } from 'react-bootstrap';
 
 class App extends Component {
     state = {
@@ -19,22 +19,24 @@ class App extends Component {
 
     render() {
         return(
-            <CardGroup>
+            <Container>
                 {this.state.cards.map(card => (
-                    <Card style={{ width: "450px"}}>
-                        <Card.Img variant="top" src={card.image} alt={card.name} />
-                        <Card.Body>
-                            <Card.Title>{card.name}</Card.Title>
-                            <Card.Text>
-                                Themes: {card.meaning}
-                            </Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                            <small className="text-muted">Sharman-Caselli Deck</small>
-                        </Card.Footer>
-                    </Card>
+                        <CardDeck>
+                            <Card>
+                                <Card.Img variant="top" src={card.image} alt={card.name} />
+                                <Card.Body>
+                                    <Card.Title>{card.name}</Card.Title>
+                                    <Card.Text>
+                                        Themes: {card.meaning}
+                                    </Card.Text>
+                                </Card.Body>
+                                <Card.Footer>
+                                    <small className="text-muted">Sharman-Caselli Deck</small>
+                                </Card.Footer>
+                            </Card>
+                        </CardDeck>
                 ))}
-            </CardGroup>
+            </Container>
         );
     }
 }
