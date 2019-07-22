@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import { Card, CardDeck } from 'react-bootstrap';
 
 class App extends Component {
     state = {
@@ -18,21 +19,23 @@ class App extends Component {
 
     render() {
         return(
-            <div class="card-deck">
+            <CardDeck>
                 {this.state.cards.map(card => (
-                    <div class="card" key={card.id} >
-                        <img class="card-img-top" src={card.image} alt={card.name}/>
-                        <div class="card-body">
-                            <h5 class="card-title">{card.name}</h5>
-                            <p class="card-text">Themes: {card.meaning}</p>
-                            <p class="card-text"><small class="text-muted">Reversed Themes: {card.reversal}</small></p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Sharman-Caselli Tarot Deck</small>
-                        </div>
-                    </div>
+                    <Card>
+                        <Card.Img variant="top" src={card.image} alt={card.name} />
+                        <Card.Body>
+                            <Card.Title>{card.name}</Card.Title>
+                            <Card.Text>
+                                Themes: {card.meaning}
+                                Reverse Themes: {card.reversal}
+                            </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                            <small className="text-muted">Sharman-Caselli Deck</small>
+                        </Card.Footer>
+                    </Card>
                 ))}
-            </div>
+            </CardDeck>
         );
     }
 }
@@ -64,6 +67,19 @@ return(
                             <Button>Read More</Button>
                         </CardBody>
                     </Card>
+
+
+                    <div class="card mb-4" key={card.id}>
+                        <img class="card-img-top" src={card.image} alt={card.name}/>
+                        <div class="card-body">
+                            <h5 class="card-title">{card.name}</h5>
+                            <p class="card-text">Themes: {card.meaning}</p>
+                            <p class="card-text"><small class="text-muted">Reversed Themes: {card.reversal}</small></p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Sharman-Caselli Tarot Deck</small>
+                        </div>
+                    </div>
 
 
     */

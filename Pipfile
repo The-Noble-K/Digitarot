@@ -10,6 +10,8 @@ django = "*"
 django-rest-framework = "*"
 pillow = "*"
 django-cors-headers = "*"
+bootstrap = "*"
+reactstrap = "*"
 
 [requires]
 python_version = "3.7"
