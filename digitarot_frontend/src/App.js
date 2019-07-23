@@ -22,8 +22,8 @@ class App extends Component {
             <Container>
                 {this.state.cards.map(card => (
                     <Row>
-                        <Col xs="3"></Col>
-                        <Col xs="6">
+                        <Col xs="4"></Col>
+                        <Col xs="4">
                             <CardDeck>
                                 <Card>
                                     <Card.Img variant="top" src={card.image} alt={card.name} />
@@ -39,7 +39,7 @@ class App extends Component {
                                 </Card>
                             </CardDeck>
                         </Col>
-                        <Col xs="3"></Col>
+                        <Col xs="4"></Col>
                     </Row>
                 ))}
             </Container>
