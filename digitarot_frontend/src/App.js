@@ -21,11 +21,11 @@ class App extends Component {
         return(
             <Container>
                 <Navbar bg="dark" variant="dark" sticky="top">
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                    <Navbar.Brand href="#">Digital Tarot</Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
+                        <Nav.Link href="#">Deck</Nav.Link>
+                        <Nav.Link href="#">Card of the Day</Nav.Link>
+                        <Nav.Link href="#">Spreads</Nav.Link>
                     </Nav>
                     <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
