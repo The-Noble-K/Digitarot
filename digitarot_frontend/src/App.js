@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Card, CardDeck, Container, Row, Col } from 'react-bootstrap';
+import { Card, CardDeck, Container, Row, Col, Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 
 class App extends Component {
     state = {
@@ -20,6 +20,18 @@ class App extends Component {
     render() {
         return(
             <Container>
+                <Navbar bg="dark" variant="dark" sticky="top">
+                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                    <Nav className="mr-auto">
+                        <Nav.Link href="#home">Home</Nav.Link>
+                        <Nav.Link href="#features">Features</Nav.Link>
+                        <Nav.Link href="#pricing">Pricing</Nav.Link>
+                    </Nav>
+                    <Form inline>
+                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                        <Button variant="outline-info">Search</Button>
+                    </Form>
+                </Navbar>
                 {this.state.cards.map(card => (
                     <Row>
                         <Col xs="4"></Col>
